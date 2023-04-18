@@ -27,7 +27,7 @@ class Road{
   }
 
   draw(ctx) {
-    ctx.lineWidth = 5;
+    ctx.lineWidth = 1;     // change to 5 for self-driving car simulation
     ctx.strokeStyle = "white";
 
     for(let i = 1; i <= this.laneCount - 1; i++) {
@@ -37,7 +37,7 @@ class Road{
         i / this.laneCount
       );
       
-      ctx.setLineDash([20, 20]);
+      ctx.setLineDash([25, 250]);   // change to [25, 25] for self-driving car simulation
       ctx.beginPath();
       ctx.moveTo(x, this.top);
       ctx.lineTo(x, this.bottom);
