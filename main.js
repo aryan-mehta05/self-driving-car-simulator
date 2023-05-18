@@ -16,7 +16,7 @@ if(localStorage.getItem("bestBrain")) {
   for(let i = 0; i < cars.length; i++) {
     cars[i].brain = JSON.parse(localStorage.getItem("bestBrain"));
     if(i != 0) {
-      NeuralNetwork.mutate(cars[i].brain, 0.05);
+      NeuralNetwork.mutate(cars[i].brain, 0.01);
     }
   }
 }
@@ -38,7 +38,44 @@ const traffic = [
   new Car(road.getLaneCenter(1), -1500, 30, 50, "DUMMY", 2, getRandomColor()),
   new Car(road.getLaneCenter(2), -1700, 30, 50, "DUMMY", 2, getRandomColor()),
   new Car(road.getLaneCenter(1), -1900, 30, 50, "DUMMY", 2, getRandomColor()),
-  new Car(road.getLaneCenter(0), -2100, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(0), -2100, 30, 50, "DUMMY", 2, getRandomColor()), //TODO: Add more levels of obstacles
+  new Car(road.getLaneCenter(0), -2300, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(1), -2300, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(1), -2500, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(2), -2800, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(0), -2900, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(1), -3100, 30, 50, "DUMMY", 2, getRandomColor()),      //* added 10 levels
+  new Car(road.getLaneCenter(1), -3300, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(0), -3500, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(1), -3700, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(2), -3900, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(0), -4100, 30, 50, "DUMMY", 2, getRandomColor()),
+  new Car(road.getLaneCenter(2), -4100, 30, 50, "DUMMY", 2, getRandomColor()), //TODO: Add 10 more levels
+  new Car(road.getLaneCenter(1), -4300, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(0), -4500, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -4500, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(2), -4700, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -5100, 30, 50, "DUMMY", 2, getRandomColor()),      //* added 10 levels
+  new Car(road.getLaneCenter(0), -5300, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -5500, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(2), -5500, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(2), -5700, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(0), -5900, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -6100, 30, 50, "DUMMY", 2, getRandomColor()), //TODO: Add 10 more levels
+  new Car(road.getLaneCenter(2), -6300, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -6500, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(2), -6700, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -6900, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(0), -7100, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(2), -7100, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(0), -7300, 30, 50, "DUMMY", 2, getRandomColor()),      //* added 10 levels
+  new Car(road.getLaneCenter(2), -7300, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(0), -7500, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(2), -7500, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -7700, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(2), -7700, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(0), -7900, 30, 50, "DUMMY", 2, getRandomColor()), 
+  new Car(road.getLaneCenter(1), -8100, 30, 50, "DUMMY", 2, getRandomColor()), //TODO: Add more levels if needed
 ]
 
 animate();
